@@ -75,6 +75,34 @@ register_deactivation_hook( __FILE__, 'rw_dsgvo_deactivate' );
  */
 function rw_dsgvo_load_template( $template ) {
 	global $wp;
+
+	// Check Useragent. Pass Searchengines
+	$crawlers = array(
+		'Google' => 'Google',
+		'MSN' => 'msnbot',
+		'Rambler' => 'Rambler',
+		'Yahoo' => 'Yahoo',
+		'AbachoBOT' => 'AbachoBOT',
+		'accoona' => 'Accoona',
+		'AcoiRobot' => 'AcoiRobot',
+		'ASPSeek' => 'ASPSeek',
+		'CrocCrawler' => 'CrocCrawler',
+		'Dumbot' => 'Dumbot',
+		'FAST-WebCrawler' => 'FAST-WebCrawler',
+		'GeonaBot' => 'GeonaBot',
+		'Gigabot' => 'Gigabot',
+		'Lycos spider' => 'Lycos',
+		'MSRBOT' => 'MSRBOT',
+		'Altavista robot' => 'Scooter',
+		'AltaVista robot' => 'Altavista',
+		'ID-Search Bot' => 'IDBot',
+		'eStyle Bot' => 'eStyle',
+		'Scrubby robot' => 'Scrubby',
+		'Facebook' => 'facebookexternalhit',
+	);
+	if (strpos($crawlers_agents, $USER_AGENT) === true ) {
+		return $template;
+	}
 	// Check cookie
 	if ( $_REQUEST[ 'dsgvo'] == 'ok' ) {
 		setcookie( 'rw-dsgvo',"yes", time()+60*60*24*356*10, '/');
