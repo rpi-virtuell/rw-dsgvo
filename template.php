@@ -705,7 +705,7 @@ $post = get_post( $privacypageid );
     </div>
 </header>
 </div>
-<div style="margin-top: 30px;">
+<div style="margin-top: 90px;">
 <?php dynamic_sidebar( 'sidebar-dsgvo-top' ); ?>
 
 <p>
