@@ -711,11 +711,11 @@ $post = get_post( $privacypageid );
 <p>
     Liebe Nutzerin, lieber Nutzer,
 </p><p>
-    Wir freuen uns, dass sie unseren Dienst in Anspruch nehmen wollen.
+    wir freuen uns, dass Sie unseren Dienst in Anspruch nehmen wollen.
 </p><p>
-    rpi-virtuell ist Teil des Comenius-Instituts in Münster und stellt zahlreiche Dienste und Webseites für den Bildunsgbereich bereit. Unsere Dienste vernetzen Bildunsginformationen weit über die kirchlichen Bereich hinaus. Deabei werden auch personenbezogene Daten verarbeitet.
+    rpi-virtuell ist Teil des Comenius-Instituts in Münster und stellt zahlreiche Dienste und Webseiten für den Bildungsbereich bereit. Unsere Dienste vernetzen Bildungsinformationen weit über den kirchlichen Bereich hinaus. Dabei werden auch personenbezogene Daten verarbeitet.
 </p><p>
-    In unserer Datenschutzerklärung erläutern wir, welche Daten wir verarbeiten und wofür wir sie benötigen. Für die Nutzung unseres Angebotes benötigen wir ihre Zustimmung.
+    In unserer Datenschutzerklärung erläutern wir, welche Daten wir verarbeiten und wofür wir sie benötigen. Für die Nutzung unseres Angebotes benötigen wir Ihre Zustimmung.
 </p>
 
 <iframe width="100%" height="100%" src="https://about.rpi-virtuell.de/datenschutz/"></iframe>
