@@ -8,12 +8,19 @@ $post = get_post( $privacypageid );
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?php $post->post_title; ?></title>
+    <title>Datenschutz<?php $post->post_title; ?></title>
 
 </head>
 <body class="docs ">
 <style>
+	#content{
+		margin-top: 90px; margin-right: 20%; margin-left: 20%; max-width:1048px;
+		
+	}
 
+	
+
+	
     #more-rpi-container-sidebar {
         position: fixed;
         top: 0;
@@ -511,10 +518,18 @@ $post = get_post( $privacypageid );
         #rw-mn .rpi-center-col{
             display: none;
         }
+		
+		#content{
+			margin-top: 90px; margin-right: 5%; margin-left: 2%;
+		}
     }
 
     @media all and (max-width: 768px) {
 
+		#content{
+			margin-top: 90px; margin-right: 2%; margin-left: 2%;
+		}
+	
         #rw-mn{
             position:absolute;
         }
@@ -664,7 +679,27 @@ $post = get_post( $privacypageid );
         color:#92AAB5;
     }
 
-
+	.dsgvo-btn {
+		margin:20px 20% 0; 
+		padding:5px 30px; 
+		font-size: 3vmin; 
+		border: 1px solid red; 
+		background-color:#1B638A; 
+		color: white; border-radius:5px;
+	}
+	
+	.dsgvo-btn:hover {
+		background-color:#295268;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		
+	}
+	
+	footer{
+		background-color:#1B638A; 
+		min-height: 200px;
+		height:30%;
+	}
+	
 </style>
 <div id="rw-mn" style="margin-bottom: 30px;">
 <header id="rpi-masthead" class="rpi-site-header" role="banner" data-infinite="on">
@@ -695,9 +730,8 @@ $post = get_post( $privacypageid );
                 <div id="rpi-top-menu">
 
                 </div>
-                <div class="header-navigation">
-<br>
- Wir brauchen ihr Einverständnis        </div>
+                <div class="header-navigation" style="margin-top:40px;">
+				Zur Nutzung Ihrer personenbezogenen Daten</div>
             </div><!--.center-col-->
 
 
@@ -705,20 +739,21 @@ $post = get_post( $privacypageid );
     </div>
 </header>
 </div>
-<div style="margin-top: 90px;">
+<div id="content" style="">
 <?php dynamic_sidebar( 'sidebar-dsgvo-top' ); ?>
 
-<p>
-    Liebe Nutzerin, lieber Nutzer,
+<h1>
+	<strong>Liebe Nutzerin, lieber Nutzer,</strong>
+</h1><p>
+    Wir freuen uns, dass Sie unseren Dienst in Anspruch nehmen wollen.
 </p><p>
-    wir freuen uns, dass Sie unseren Dienst in Anspruch nehmen wollen.
+    rpi-virtuell ist Teil des Comenius-Instituts in Münster und stellt zahlreiche Dienste und Webseites für den Bildunsgbereich bereit. Unsere Dienste vernetzen Bildunsgsakteuere weit über die kirchlichen Bereich hinaus. Dabei werden notwenig auch personenbezogene Daten verarbeitet.
 </p><p>
-    rpi-virtuell ist Teil des Comenius-Instituts in Münster und stellt zahlreiche Dienste und Webseiten für den Bildungsbereich bereit. Unsere Dienste vernetzen Bildungsinformationen weit über den kirchlichen Bereich hinaus. Dabei werden auch personenbezogene Daten verarbeitet.
-</p><p>
-    In unserer Datenschutzerklärung erläutern wir, welche Daten wir verarbeiten und wofür wir sie benötigen. Für die Nutzung unseres Angebotes benötigen wir Ihre Zustimmung.
+    In unserer <strong>Datenschutzerklärung</strong> erläutern wir, welche Daten wir verarbeiten und wofür wir sie benötigen. 
+	<b style="color:red">Für die Nutzung unseres Angebotes benötigen wir ihre Zustimmung.</b>
 </p>
 
-<iframe width="100%" height="100%" src="https://about.rpi-virtuell.de/datenschutz/"></iframe>
+<iframe width="100%" height="40%" src="https://about.rpi-virtuell.de/datenschutz/?frame"></iframe>
 <?php
 $privacypageid = get_option( 'wp_page_for_privacy_policy' );
 $post = get_post( $privacypageid );
@@ -726,9 +761,11 @@ $post = get_post( $privacypageid );
 ?>
 
 <form >
-	<button type="submit" name="dsgvo" value="ok">Ja, ich bin damit einverstanden!</button>
+	<button type="submit" name="dsgvo" value="ok" class="dsgvo-btn">Ja, ich bin damit einverstanden!</button>
 </form>
 <?php dynamic_sidebar( 'sidebar-dsgvo-bottom' ); ?>
 </div>
+<footer>
+</footer>
 </body>
 </html>
