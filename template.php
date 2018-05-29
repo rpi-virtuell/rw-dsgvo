@@ -696,7 +696,6 @@ $post = get_post( $privacypageid );
 	
 	footer{
 		background-color:#1B638A; 
-		height:30%;
 		padding: 0 0 10% 0;
 	}
 	
