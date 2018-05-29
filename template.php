@@ -696,10 +696,29 @@ $post = get_post( $privacypageid );
 	
 	footer{
 		background-color:#1B638A; 
-		min-height: 200px;
 		height:30%;
+		padding: 0 0 10% 0;
 	}
 	
+	footer section{
+		width: 40%;
+		float:left;
+		color: white;
+		font-weight:normal;
+		padding: 5px 5%;
+		
+	}
+	footer section p{
+		font-size: 0.85rem !important;
+	}
+	footer section img{
+		max-width: 200px;
+		
+	}
+	footer section a{
+		color: white;
+		
+	}
 </style>
 <div id="rw-mn" style="margin-bottom: 30px;">
 <header id="rpi-masthead" class="rpi-site-header" role="banner" data-infinite="on">
@@ -763,9 +782,10 @@ $post = get_post( $privacypageid );
 <form >
 	<button type="submit" name="dsgvo" value="ok" class="dsgvo-btn">Ja, ich bin damit einverstanden!</button>
 </form>
-<?php dynamic_sidebar( 'sidebar-dsgvo-bottom' ); ?>
 </div>
 <footer>
+<?php dynamic_sidebar( 'sidebar-dsgvo-bottom' ); ?>
+<div style="clear:both; width:100%"></div>
 </footer>
 </body>
 </html>
