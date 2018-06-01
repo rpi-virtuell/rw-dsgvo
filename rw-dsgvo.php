@@ -107,7 +107,7 @@ function rw_dsgvo_load_template( $template ) {
 	if ( $_REQUEST[ 'dsgvo'] == 'ok' ) {
 		setcookie( 'rw-dsgvo',"yes", time()+60*60*24*356*10, '/');
 		$ts = '?dsgvo-confirmed='. time();
-		if(strpos($wp->request, '?' > 0 ){
+		if(strpos($wp->request, '?') > 0 ){
 			$ts = '&dsgvo-confirmed='. time();
 		}
 		wp_redirect( home_url( $wp->request . $ts ) );
