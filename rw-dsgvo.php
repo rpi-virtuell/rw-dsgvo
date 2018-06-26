@@ -100,7 +100,9 @@ function rw_dsgvo_load_template( $template ) {
 		'Scrubby robot' => 'Scrubby',
 		'Facebook' => 'facebookexternalhit',
 	);
-	if (strpos($crawlers_agents, $USER_AGENT) === true ) {
+	$crawlers_agents = implode('|',$crawlers);
+
+	if ( strpos( $crawlers_agents, $_SERVER[ 'HTTP_USER_AGENT' ] ) !== false ) {
 		return $template;
 	}
 	// Check cookie
