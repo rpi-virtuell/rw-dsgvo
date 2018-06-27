@@ -100,11 +100,14 @@ function rw_dsgvo_load_template( $template ) {
 		'Scrubby robot' => 'Scrubby',
 		'Facebook' => 'facebookexternalhit',
 	);
-	$crawlers_agents = implode('|',$crawlers);
 
-	if ( strpos( $crawlers_agents, $_SERVER[ 'HTTP_USER_AGENT' ] ) !== false ) {
+	$pattern = '/(' . implode('|', $crawlers ) . ')/i';
+	$matches = array();
+	$numMatches = preg_match( $pattern, strtolower( $_SERVER['HTTP_USER_AGENT'] ), $matches  );
+	if( $numMatches > 0 ) {
 		return $template;
 	}
+
 	// Check cookie
 	if ( $_REQUEST[ 'dsgvo'] == 'ok' ) {
 		setcookie( 'rw-dsgvo',"yes", time()+60*60*24*356*10, '/');
