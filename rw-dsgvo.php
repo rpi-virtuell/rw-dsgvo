@@ -4,7 +4,7 @@
  * Plugin Name:       RW DSGVO
  * Plugin URI:        https://github.com/rpi-virtuell/rw-dsgvo
  * Description:       RPI Virtuell - DSGVO Handling
- * Version:           0.0.4
+ * Version:           0.0.5
  * Author:            Frank Neumann-Staude
  * Author URI:        https://staude.net
  * License:           GNU General Public License v2
@@ -100,7 +100,8 @@ function rw_dsgvo_load_template( $template ) {
 		'Scrubby robot' => 'Scrubby',
 		'Facebook' => 'facebookexternalhit',
 		'WordPress' => 'WordPress',
-		'None' => 'https',
+		'None' => 'http',
+		'Bot' => 'bot',
 	);
 
 	$pattern = '/(' . implode('|', $crawlers ) . ')/i';
